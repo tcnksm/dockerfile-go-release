@@ -1,7 +1,5 @@
-Dockerfile-go-release
+Dockerfile-go-release [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][LICENSE]
 ====
-
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][LICENSE]
 
 [LICENSE]: https://github.com/tcnksm/dockerfile-gox/blob/master/LICENCE
 
@@ -24,9 +22,9 @@ To cross-compile & upload current directory project,
 $ docker run --rm -v $(pwd):/gopath/${$(pwd)#*${GOPATH}/} -w /gopath/${$(pwd)#*${GOPATH}/} tcnksm/go-release:1.5-beta VERSION USER TOKEN
 ```
 
-You need to specify `VERSION`, `USER` (Github username), `GITHUB_TOKEN`.
+You need to specify `VERSION`, `USER` (Github username), [`GITHUB_TOKEN`](#github-token).
 
-`tcnksm/go-release` calls [mitchell/gox](https://github.com/mitchellh/gox) and [tcnksm/ghr](https://github.com/tcnksm/ghr). To set additional option of them, use `GOX_OPT` and `GHR_OPT` env ver. For example, if you want to set `--replace` option for `ghr`, set it via docker run's `-e` option (`-e "GHR_OPT=--replace"`). 
+`tcnksm/go-release` calls [mitchell/gox](https://github.com/mitchellh/gox) and [tcnksm/ghr](https://github.com/tcnksm/ghr). To set additional option of them, use `GOX_OPT` and `GHR_OPT` env ver. For example, if you want to set `--replace` option for ghr, set it via docker run`-e` option (`-e "GHR_OPT=--replace"`). 
 
 
 ## Example
@@ -47,7 +45,7 @@ $ cd $TAG
 $ docker build -t tcnksm/go-release:$TAG . 
 ```
 
-## GitHub API Token
+## GitHub Token
 
 To be able to use this step, you will first need to create a GitHub token with an account which has enough permissions to be able to create releases. First goto `Account settings`, then goto `Applications` for the user. Here you can create a token in the `Personal access tokens` section. For a private repository you will need the `repo` scope and for a public repository you will need the `public_repo` scope. Then it is recommended to save this token on wercker as a protected environment variable.
 
