@@ -24,7 +24,7 @@ To cross-compile & upload current directory project,
 $ docker run --rm -v $(pwd):/gopath/${$(pwd)#*${GOPATH}/} -w /gopath/${$(pwd)#*${GOPATH}/} tcnksm/go-release:1.5-beta VERSION USER TOKEN
 ```
 
-You need to specify `VERSION`, `USER` (Github username), [`GITHUB_TOKEN`](#github-token).
+You need to specify `VERSION`, `USER` (Github username) and [`GITHUB_TOKEN`](#github-token).
 
 `tcnksm/go-release` calls [mitchell/gox](https://github.com/mitchellh/gox) and [tcnksm/ghr](https://github.com/tcnksm/ghr). To set additional option of them, use `GOX_OPT` and `GHR_OPT` env ver. For example, if you want to set `--replace` option for ghr, set it via docker run`-e` option (`-e "GHR_OPT=--replace"`). 
 
