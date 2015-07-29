@@ -53,7 +53,7 @@ To be able to use this step, you will first need to create a GitHub token with a
 
 ## Contribution
 
-1. Fork ([https://github.com/tcnksm/dockerfile-gox/fork](https://github.com/tcnksm/dockerfile-gox/fork))
+1. Fork ([https://github.com/tcnksm/dockerfile-go-release/fork](https://github.com/tcnksm/dockerfile-go-release/fork))
 1. Create a feature branch
 1. Commit your changes
 1. Rebase your local changes against the master branch
