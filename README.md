@@ -3,8 +3,10 @@ Dockerfile-go-release [![MIT License](http://img.shields.io/badge/license-MIT-bl
 
 [LICENSE]: https://github.com/tcnksm/dockerfile-gox/blob/master/LICENCE
 
-Dockerfile for cross-compiling golang project with `gox`, zip them and upload them to GitHub by `ghr`.
-Compiling and uploading are executed parallelly.
+[tcnksm/go-release Repository | Docker Hub Registry - Repositories of Docker Images](https://registry.hub.docker.com/u/tcnksm/go-release/)
+
+Dockerfile for cross-compiling ([mitchell/gox](https://github.com/mitchellh/gox)) & uploading artifacts to Github Release page ([tcnksm/ghr](https://github.com/tcnksm/ghr)). Compiling and uploading are executed parallelly.
+
 
 ## Supported tags
 
@@ -60,4 +62,4 @@ To be able to use this step, you will first need to create a GitHub token with a
 
 ## Author
 
-[tcnksm](https://github.com/tcnksm)
+[Taich Nakashima](https://github.com/tcnksm)
